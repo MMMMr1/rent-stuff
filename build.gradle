@@ -15,7 +15,8 @@ version = '0.0.1-SNAPSHOT'
 repositories {
     mavenCentral()
     maven {
-        url 'https://global.repo.jmix.io/repository/public'
+//        url 'https://global.repo.jmix.io/repository/public'
+        url 'https://nexus.jmix.io/repository/public'
     }
 }
 
@@ -40,6 +41,9 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    testImplementation('io.jmix.ui:jmix-ui-test-assist')
+    testImplementation('org.hsqldb:hsqldb')
+
 }
 
 test {
